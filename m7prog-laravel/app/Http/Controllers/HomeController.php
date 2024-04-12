@@ -1,15 +1,12 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-
-class AboutController extends Controller
+class HomeController extends Controller
 {
     public function index() {
-        return 'Dit is de about pagina.';
-    } 
+        return view(view:'homepage.index');
+    }
 }
-

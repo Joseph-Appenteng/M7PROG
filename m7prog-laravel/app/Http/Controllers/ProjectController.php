@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class ProjectController extends Controller
 {
     public function index() {
-        return 'Dit is de main pagina.';
+        return view(view:'projects.projects');
     }
 }
