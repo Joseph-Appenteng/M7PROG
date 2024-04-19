@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 
 */
-Route::get('/project', [ \App\Http\Controllers\ProjectController::class, 'index'])->name('project');
+Route::get('/project', [ \App\Http\Controllers\ProjectController::class, 'add'])->name('project');
+Route::get('/projects/index', [ \App\Http\Controllers\ProjectController::class, 'index'])->name('project.index');
 Route::get('/home', [ \App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
 
 Route::get('/', function () {
     return view('welcome');
