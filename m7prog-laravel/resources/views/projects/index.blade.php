@@ -1,18 +1,17 @@
-<x-app-layout><x-master-layout>
-@section('scripts')
-        <script>
-            doeIets('Mijn script werkt');
-        </script>
-    @endsection
-    @foreach( $projects as $project )
+<x-master-layout>@foreach( $projects as $project )
+<a href="{{ route('project.show', $project) }}">Bekijk dit item</a>
         <div
             class="max-w-sm p-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
                 {{$project->title}}
             </h5>
         </div>
-    @endforeach  
-</x-master-layout>
-</x-app-layout>
+    @endforeach 
+    @section('scripts')
+        <script>
+            doeIets('Mijn script werkt');
+        </script>
+    @endsection
+    </x-master-layout>
 
     

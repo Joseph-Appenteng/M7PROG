@@ -17,7 +17,7 @@
     <x-nav-link :href="route('home')" :active="request()->routeIs('home')" class="bg-black dark:bg-black-800">
         {{ __('Portfolio') }}
     </x-nav-link>
-    <x-nav-link :href="route('project')" :active="request()->routeIs('project')"  class="bg-black dark:bg-black-800">
+    <x-nav-link :href="route('project.index')" :active="request()->routeIs('project')"  class="bg-black dark:bg-black-800">
         {{ __('Projects') }}
     </x-nav-link>
 </div>

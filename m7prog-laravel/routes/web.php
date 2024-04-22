@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 
 */
-Route::get('/project', [ \App\Http\Controllers\ProjectController::class, 'add'])->name('project');
-Route::get('/projects/index', [ \App\Http\Controllers\ProjectController::class, 'index'])->name('project.index');
+Route::get('/projects/add', [ProjectController::class, 'add'])->name('project.add');
+Route::get('/projects/index', [ ProjectController::class, 'index' ])->name('project.index');
+Route::get('/project/{project}', [ProjectController::class, 'show'])->name('project.show');
 Route::get('/home', [ \App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
